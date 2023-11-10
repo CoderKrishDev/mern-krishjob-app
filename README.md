@@ -28,7 +28,7 @@ npm run dev
 
 ```jsx
 const App = () => {
-  return <h1>Jobify App</h1>;
+  return <h1>KrishJob App</h1>;
 };
 export default App;
 ```
@@ -49,10 +49,6 @@ export default App;
 - less lines of css
 - speeds up the development
 
-- if any questions about specific styles
-- Coding Addict - [Default Starter Video](https://youtu.be/UDdyGNlQK5w)
-- Repo - [Default Starter Repo](https://github.com/john-smilga/default-starter)
-
 #### Title and Favicon
 
 - add favicon.ico in public
@@ -61,7 +57,7 @@ export default App;
 ```html
 <head>
   <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-  <title>Jobify</title>
+  <title>KrishJob</title>
 </head>
 ```
 
@@ -443,7 +439,7 @@ const Landing = () => {
   return (
     <StyledWrapper>
       <nav>
-        <img src={logo} alt="jobify" className="logo" />
+        <img src={logo} alt="KrishJob" className="logo" />
       </nav>
       <div className="container page">
         {/* info */}
@@ -544,7 +540,7 @@ import Wrapper from '../assets/wrappers/LandingPage';
 import logo from '../assets/images/logo.svg';
 
 const Logo = () => {
-  return <img src={logo} alt="jobify" className="logo" />;
+  return <img src={logo} alt="KrishJob" className="logo" />;
 };
 
 export default Logo;
@@ -653,7 +649,7 @@ const Register = () => {
             id="name"
             name="name"
             className="form-input"
-            defaultValue="john"
+            defaultValue="krish"
             required
           />
         </div>
@@ -762,7 +758,7 @@ const Login = () => {
       <form className="form">
         <Logo />
         <h4>Login</h4>
-        <FormRow type="email" name="email" defaultValue="john@gmail.com" />
+        <FormRow type="email" name="email" defaultValue="krish@gmail.com" />
         <FormRow type="password" name="password" defaultValue="secret123" />
         <button type="submit" className="btn btn-block">
           submit
@@ -947,7 +943,7 @@ import { useState, createContext, useContext } from 'react';
 const DashboardContext = createContext();
 const Dashboard = () => {
   // temp
-  const user = { name: 'john' };
+  const user = { name: 'krish' };
 
   const [showSidebar, setShowSidebar] = useState(false);
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -1683,7 +1679,7 @@ rd /s /q .git
 - Windows commands were shared by students and I have not personally tested them.
 - git status should return :
   "fatal: Not a git repository (or any of the parent directories): .git"
-- create jobify directory
+- create KrishJob directory
 - copy/paste client
 - move README to root
 
@@ -2616,7 +2612,7 @@ router
 
 ```json
 {
-  "company": "coding addict",
+  "company": "code connects",
   "position": "backend-end",
   "jobStatus": "pending",
   "jobType": "full-time",
@@ -2761,8 +2757,8 @@ export const register = async (req, res) => {
 
 ```json
 {
-  "name": "john",
-  "email": "john@gmail.com",
+  "name": "krish",
+  "email": "krish@gmail.com",
   "password": "secret123",
   "lastName": "smith",
   "location": "my city"
@@ -2901,7 +2897,7 @@ const register = async (req, res) => {
 
 ```json
 {
-  "email": "john@gmail.com",
+  "email": "krish@gmail.com",
   "password": "secret123"
 }
 ```
@@ -3393,8 +3389,8 @@ export const updateUser = async (req, res) => {
 
 ```json
 {
-  "name": "john",
-  "email": "john@gmail.com",
+  "name": "krish",
+  "email": "krish@gmail.com",
   "lastName": "smith",
   "location": "florida"
 }
@@ -3755,7 +3751,7 @@ const Login = () => {
       <Form method="post" className="form">
         <Logo />
         <h4>login</h4>
-        <FormRow type="email" name="email" defaultValue="john@gmail.com" />
+        <FormRow type="email" name="email" defaultValue="krish@gmail.com" />
         <FormRow type="password" name="password" defaultValue="secret123" />
         <button type="submit" className="btn btn-block" disabled={isSubmitting}>
           {isSubmitting ? 'submitting...' : 'submit'}
@@ -5205,7 +5201,7 @@ import Job from './models/JobModel.js';
 import User from './models/UserModel.js';
 try {
   await mongoose.connect(process.env.MONGO_URL);
-  // const user = await User.findOne({ email: 'john@gmail.com' });
+  // const user = await User.findOne({ email: 'krish@gmail.com' });
   const user = await User.findOne({ email: 'test@test.com' });
 
   const jsonJobs = JSON.parse(
