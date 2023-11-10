@@ -1,7 +1,7 @@
 {
   "name": "krishdevjobapp",
   "version": "1.0.0",
-  "description": "[Jobify](https://jobify.live/)",
+  "description": "krishdevjobapp for job create and see",
   "main": "index.js",
   "type": "module",
   "scripts": {
