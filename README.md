@@ -1,31 +1,6 @@
-#### To run the project
+#### Create React APP
 
-- clone this project in your local repo
-- setup the .env file with following values
-- NODE_ENV =development
-- PORT = 5100
-- MONGO_URL=
-- JWT_SECRET=
-- JWT_EXPIRES_IN=1d
-
-#### cloudinary data
-
-- CLOUD_NAME=
-- CLOUD_API_KEY=
-- CLOUD_API_SECRET=
-- then run following command in the terminal
-
-```sh
-npm i && cd client && npm i
-
-```
-
-#### then go to main project file outside of client and run
-
-```sh
-npm run dev
-
-```
+[VITE](https://vitejs.dev/guide/)
 
 ```sh
 npm create vite@latest projectName -- --template react
@@ -4276,10 +4251,9 @@ npm i dayjs@1.11.7
 
 ```js
 import { FaLocationArrow, FaBriefcase, FaCalendarAlt } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, Form } from 'react-router-dom';
 import Wrapper from '../assets/wrappers/Job';
 import JobInfo from './JobInfo';
-import { Form } from 'react-router-dom';
 import day from 'dayjs';
 import advancedFormat from 'dayjs/plugin/advancedFormat';
 day.extend(advancedFormat);
@@ -5768,7 +5742,6 @@ import Wrapper from '../assets/wrappers/DashboardFormPage';
 import { Form, useSubmit, Link } from 'react-router-dom';
 import { JOB_TYPE, JOB_STATUS, JOB_SORT_BY } from '../../../utils/constants';
 import { useAllJobsContext } from '../pages/AllJobs';
-
 const SearchContainer = () => {
   const { searchValues } = useAllJobsContext();
   const { search, jobStatus, jobType, sort } = searchValues;
