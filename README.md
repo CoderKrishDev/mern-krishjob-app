@@ -1,20 +1,31 @@
-To run the project
-clone this project in your local repo
-setup the .env file with following values
-NODE_ENV =development
-PORT = 5100
-MONGO_URL=
-JWT_SECRET=
-JWT_EXPIRES_IN=1d
-// cloudinary data
-CLOUD_NAME=
-CLOUD_API_KEY=
-CLOUD_API_SECRET=
-then run following command in the terminal
+#### To run the project
+
+- clone this project in your local repo
+- setup the .env file with following values
+- NODE_ENV =development
+- PORT = 5100
+- MONGO_URL=
+- JWT_SECRET=
+- JWT_EXPIRES_IN=1d
+
+#### cloudinary data
+
+- CLOUD_NAME=
+- CLOUD_API_KEY=
+- CLOUD_API_SECRET=
+- then run following command in the terminal
+
+```sh
 npm i && cd client && npm i
 
-then go to main project file outside of client and run
+```
+
+#### then go to main project file outside of client and run
+
+```sh
 npm run dev
+
+```
 
 ```sh
 npm create vite@latest projectName -- --template react
