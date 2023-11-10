@@ -34,7 +34,7 @@ const Login = () => {
 
     try {
       await customFetch.post('/auth/login', data);
-      toast.success('Login successful');
+      toast.success('Take a test drive ✈️');
       navigate('/dashboard');
     } catch (error) {
       toast.error(error?.response?.data?.msg);
