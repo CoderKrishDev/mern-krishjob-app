@@ -6,6 +6,8 @@ import mongoose from 'mongoose';
 import * as dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 import cloudinary from 'cloudinary';
+import helmet from 'helmet';
+import mongoSanitize from 'express-mongo-sanitize';
 
 //router
 import jobRouter from './routers/jobRouter.js';
@@ -40,14 +42,8 @@ if (process.env.NODE_ENV === 'development') {
 app.use(express.static(path.resolve(__dirname, './client/dist')));
 app.use(cookieParser());
 app.use(express.json());
-
-app.get('/', (req, res) => {
-  res.send('Welcome to the server!');
-});
-
-app.get('/api/v1/test', (req, res) => {
-  res.json({ msg: 'test route' });
-});
+app.use(helmet());
+app.use(mongoSanitize());
 
 // app.post('/api/v1/test', validateTest, (req, res) => {
 //   const { name } = req.body;
